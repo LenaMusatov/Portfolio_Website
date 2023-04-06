@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="mouse.css">
     <script src="js/p5.js" defer></script>
+        <!-- https://cdnjs.com/libraries/jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     
 </head>
 <!-- inspiratie uit tutorial https://youtu.be/0YFrGy_mzjY -->
@@ -40,82 +42,71 @@
     <div class="circle"></div>
     <div class="circle"></div>
 
-    <!-- ---------------------Menu------------------- -->
-    <div class="container">
-        <nav>
-            <img src="media/logo-blue.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#portfolio">My work</a></li>
-                <li><a href="about.html#about">About</a></li>
-                <li><a href="about.html#contact">Contact</a></li>
-            </ul>
-          </nav>
-    </div>
-
-
-<!-- ---------------------gallery------------------- -->
-
-<!-- Using the mansory library: https://masonry.desandro.com/layout.html -->
-    <section class="container">
-        <h1 class="sub-title" id="sub-title2">Animation</h1>
-
-        <div class="grid">
-            <div class="grid-sizer"></div>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/Teaser_Skateboarding_Lena.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/Eindproduct_animatie_logo.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/TechlabsAnimatie2.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/Ocean-practice.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/ranboo-animation.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/BUNNYGIFWEB.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/dream-animation.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/mad.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-                <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/Techo-swing-practice.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                </video>
-          </div>
-
+<!-- ---------------------Loading------------------- -->
+   <div class="loader">
+    <section id="loading">
+      <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
     </section>
+   </div>
 
-    <div class="container"></div>
+   <div class="content">
 
+<div class="content">
+        <!-- ---------------------Menu------------------- -->
+        <div class="container">
+            <nav>
+                <img src="media/logo-blue.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#portfolio">My work</a></li>
+                    <li><a href="about.html#about">About</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
+                </ul>
+              </nav>
+        </div>
     
-
-<div id="videosList">           
-    <div class="video">
-        <video class="thevideo" loop preload="none">
-          <source src="media/animation/Teaser_Skateboarding_Lena.mp4" type="video/mp4">
-           Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
     
-  
+    <!-- ---------------------gallery------------------- -->
+    
+    <!-- Using the mansory library: https://masonry.desandro.com/layout.html -->
+        <section id="gif" class="container">
+            <h1 class="sub-title" id="sub-title2">Animation</h1>
+    
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                    <img class="grid-item" src="media/animation/gif/Teaser-Skateboarding-Lena.gif" alt="Your browser does not support the gif tag.">
+
+                    <img class="grid-item" src="media/animation/gif/Eindproduct-animatie-logo.gif" alt="Your browser does not support the gif">
+
+                    <img class="grid-item" src="media/animation/gif/TechlabsAnimatie2.gif" alt="Your browser does not support the gif">
+
+                    <img class="grid-item" src="media/animation/gif/Ocean-practice.gif" alt="Your browser does not support the gif">
+
+                    <img class="grid-item" src="media/animation/gif/ranboo-animation.gif" alt="Your browser does not support the gif">
+                   
+                    <img class="grid-item" src="media/animation/gif/BUNNYGIFWEB.gif" alt="Your browser does not support the gif">
+                  
+                    <img class="grid-item" src="media/animation/gif/dream-animation.gif" alt="Your browser does not support the gif">
+                    
+                    <img class="grid-item" src="media/animation/gif/mad.gif" alt="Your browser does not support the gif">
+
+                    <img class="grid-item" src="media/animation/gif/Techo-swing-practice.gif" alt="Your browser does not support the gif">
+        
+              </div>
+        </section>
+    
+ </div>
+    
+     <script>
+    $(window).on('load',function(){
+      $(".loader").fadeOut(1000);
+      $(".content").fadeIn(1000);
+    });
+   </script> 
     
 </body>
 </html>
