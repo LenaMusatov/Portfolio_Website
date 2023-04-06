@@ -7,91 +7,204 @@
     <meta http-equiv="X-AU-ompatible" content="ie=edge">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
-    <script src="js/script.js" defer></script>
+
+    <link rel="stylesheet" href="mouse.css">
+    <script src="js/p5.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <!-- inspiratie uit tutorial https://youtu.be/0YFrGy_mzjY -->
 <body>
+    <!-- ---------------------Mous trail------------------- -->
+    <!-- Inspiratie uit: https://codepen.io/zainzafar/pen/oNypoEr -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- ---------------------Menu------------------- -->
     <div class="container">
         <nav>
             <img src="media/logo-blue.png" alt="logo" class="logo">
             <ul>
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#portfolio">My work</a></li>
-                <li><a href="about.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
     </div>
-
-    <!-- ---------------------Contact------------------- -->
-    <!-- Inspiratie van https://youtu.be/ZafzM_z9PLs -->
-    
-    <Section class="contactSec">
-        <div class="contContact">
-            <div class="contactInfo">
-                <div>
-                    <h2>contactInfo</h2>
-                    <ul class="info">
-                        <li>
-                            <span><img src="media/icons/location.png" alt="location"></span>
-                            <span>s'Hertogenbosch<br>The Netherlands</span>
-                        </li>
-                        <li>
-                            <span><img src="media/icons/mail.png" alt="location"></span>
-                            <span>lenamusatov@icloud.com</span>
-                        </li>
-                        <li>
-                            <span><img src="media/icons/call.png" alt="location"></span>
-                            <span>+3167769496(fake)</span>
-                        </li>
-                    </ul>
+    <!-- ---------------------About------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="media/user2.png" alt="Personal photo">
                 </div>
-                <ul class="sci">
-                    <li><a href="#"><img src="media/icons/1.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="media/icons/2.png" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="media/icons/3.png" alt="Instagram"></a></li>
-                    <li><a href="#"><img src="media/icons/4.png" alt="Pinterest"></a></li>
-                    <li><a href="#"><img src="media/icons/5.png" alt="Linkedin"></a></li>
-                </ul>
-            </div>
-            <div class="contactForm">
-                <h2>Send a Message</h2>
-
-                <div class="formBox">
-                    <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>First Name</span>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I'm Lèna Musatov. From a young age, I have traveled a lot and moved frequently, I can adapt quickly and easily learn new things. 
+                    I have been inspired by animated movies since I was a kid. I love to build stories and characters. I have been illustrating stories since 2017, but how amazing would it be if your creations can move and come to life! Likewise, I aspire to become an animator to bring my own and other's people creations to life.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> 
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p> 
+                        <p class="tab-links" onclick="opentab('education')">Education</p> 
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Creative skills</span><br>Illustration, Character Design, Animation, Visual Design, UI/UX Design</li>
+                            <li><span>Concepting</span><br>Translating a vision or an idea into words and images</li>
+                            <li><span>Programming</span><br>Arduino, Processing, HTML, CSS, JQuery and Javascript</li>
+                            <li><span>Adobe</span><br>Adobe Photoshop, Adobe After Effects, Adobe Premier Pro, Adobe Indesign and Adobe XD</li>
+                            <li><span>Creative programs</span><br>Clip Studio Paint, Medibang Paint, OpenToonz and Blender</li>
+                        </ul>
                     </div>
 
-                    <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>Last Name</span>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Blok 6</span><br>Mobile Interaction</li>
+                            <li><span>Blok 5</span><br>Physical Interaction</li>
+                            <li><span>Blok 4</span><br>Interactive Design</li>
+                            <li><span>Blok 3</span><br>Motion Design</li>
+                            <li><span>Blok 2</span><br>Web Design</li>
+                            <li><span>Blok 1</span><br>Visual Design</li>
+                        </ul>
                     </div>
-
-                    <div class="inputBox w50">
-                        <input type="email" required>
-                        <span>Email Address</span>
-                    </div>
-
-                    <div class="inputBox w50">
-                        <input type="text" required>
-                        <span>Mobile Number</span>
-                    </div>
-
-                    <div class="inputBox w100">
-                        <textarea required></textarea>
-                        <span>Write your message here...</span>
-                    </div>
-
-                    <div class="inputBox w100">
-                        <input type="submit" value="Send">
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Aug.2021 - current</span><br>Avans University of Applied Sciences, The Netherlands<br>Communication & Multimedia Design</li>
+                            <li><span>30.Jan - 3.Feb 2023</span><br>Blended Intensive Program. Institute of Technology, Dundalk, Ireland</li>
+                            <li><span>2019 - 2021</span><br>Bernardinus college, Senior High school</li>
+                            <li><span>2015 -2018</span><br>I.E.S El Galeón, Senior High School, Tenerife, Spain</li>
+                            <li><span>Sep.2017 - Dec.2017</span><br>Scholarship. Dominican College, High School, Wicklow, Ireland</li>
+                        </ul>
                     </div>
                 </div>
-
             </div>
         </div>
-    </Section>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
 
 
+
+    <!-- ---------------------Contact------------------- -->
+    <!-- Inspiratie van https://www.youtube.com/watch?v=2HdNwGUBGF4 -->
+    <section id="contact">
+        <div class="containerContact">
+            <div class="form">
+              <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                  Are you interested in working together? Feel free to contact me and we can get in touch!
+                </p>
+      
+                <div class="info">
+                  <div class="information">
+                    <img src="media/icons/location.png" class="icon" alt="" />
+                    <p>'s-Hertogenbosch, The Netherlands</p>
+                  </div>
+                  <div class="information">
+                    <img src="media/icons/email.png" class="icon" alt="" />
+                    <p>lenamusatov@icloud.com</p>
+                  </div>
+                  <div class="information">
+                    <!-- <img src="media/icons/phone.png" class="icon" alt="" />
+                    <p>123-456-789</p> -->
+                  </div>
+                </div>
+      
+                <div class="social-media">
+                  <p>Connect with :</p>
+                  <div class="social-icons">
+                    <a href="https://www.instagram.com/lena_musatov/" target="_blank">
+                      <img src="media/icons/s/1.png" alt="Instagram" class="icon">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCtVDdmYhSdDpWxyzKeAKa2g" target="_blank">
+                      <img src="media/icons/s/2.png" alt="Youtube" class="icon">
+                    </a>
+                    <a href="https://www.artfol.co/lena_musatov" target="_blank">
+                      <img src="media/icons/s/3.png" alt="Artfol" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/l%C3%A8na-musatov-4a326b26b/" target="_blank">
+                      <img src="media/icons/s/5.png" alt="Linkedin" class="icon">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- using https://formsubmit.co/ -->
+      
+              <div class="contact-form">
+                <form action="https://formsubmit.co/lenamusatov@icloud.com" method="POST">
+                  <h3 class="title">Contact us</h3>
+
+                  <input type="hidden" name="_next" value="https://lenamusatov.com/thankyou.html">
+                  <input type="hidden" name="_subject" value="Email submission web">
+
+                  <div class="input-container">
+                    <input type="text" name="name" class="input" required/>
+                    <label for="">Name</label>
+                    <span>Username</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="email" name="email"  class="input" required/>
+                    <label for="">Email</label>
+                    <span>Email</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="tel" name="phone" class="input" />
+                    <label for="">Phone</label>
+                    <span>Phone</span>
+                  </div>
+                  <div class="input-container textarea">
+                    <textarea type="text" name="message" class="input" required></textarea>
+                    <label for="">Message</label>
+                    <span>Message</span>
+                  </div>
+                  <input type="submit" value="Send" class="btn" />
+                </form>
+              </div>
+            </div>
+          </div>
+    
+          <script src="js/contact.js"></script>
+    </section>
 
     
 </body>
