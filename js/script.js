@@ -11,7 +11,7 @@ const textLoad = () => {
     }, 0);
 
     setTimeout(() =>{
-        text.textContent = "an Ilustrator";
+        text.textContent = "an Illustrator";
 
     }, 4000);
 
