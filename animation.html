@@ -13,54 +13,74 @@
 
     <link rel="stylesheet" href="mouse.css">
     <script src="js/p5.js" defer></script>
+        <!-- https://cdnjs.com/libraries/jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     
 </head>
 <!-- inspiratie uit tutorial https://youtu.be/0YFrGy_mzjY -->
 <body>
     <!-- ---------------------Mous trail------------------- -->
     <!-- Inspiratie uit: https://codepen.io/zainzafar/pen/oNypoEr -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <div class="mouse">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        </div>
 
-    <!-- ---------------------Menu------------------- -->
-    <div class="container">
-        <nav>
-            <img src="media/logo-blue.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#portfolio">My work</a></li>
-                <li><a href="about.html#about">About</a></li>
-                <li><a href="about.html#contact">Contact</a></li>
-            </ul>
-          </nav>
-    </div>
+<!-- ---------------------Loading------------------- -->
+   <div class="loader">
+    <section id="loading">
+      <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </section>
+   </div>
 
+   <div class="content">
 
-<!-- ---------------------gallery------------------- -->
+<div class="content">
+        <!-- ---------------------Menu------------------- -->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="media/logo-purple.png" alt="logo" class="logo">
+                </a>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#portfolio">My work</a></li>
+                    <li><a href="about.html#about">About</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
+                </ul>
+              </nav>
+        </div>
+    
+    
+    <!-- ---------------------gallery------------------- -->
+    
+    <!-- Using the mansory library: https://masonry.desandro.com/layout.html -->
+        <section id="video" class="container">
+            <h1 class="sub-title" id="sub-title2">Animation/Stopmotion</h1>
 
-<!-- Using the mansory library: https://masonry.desandro.com/layout.html -->
-    <section class="container">
-        <h1 class="sub-title" id="sub-title2">Animation</h1>
-
-        <div class="grid">
+         <div class="grid">
             <div class="grid-sizer"></div>
                 <video class="grid-item" autoplay muted loop>
                     <source src="media/animation/Teaser_Skateboarding_Lena.mp4" type="video/mp4">
@@ -79,6 +99,10 @@
                      Your browser does not support the video tag.
                 </video>
                 <video class="grid-item" autoplay muted loop>
+                    <source src="media/animation/Cat-animation.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                </video>
+                <video class="grid-item" autoplay muted loop>
                     <source src="media/animation/ranboo-animation.mp4" type="video/mp4">
                      Your browser does not support the video tag.
                 </video>
@@ -87,31 +111,41 @@
                      Your browser does not support the video tag.
                 </video>
                 <video class="grid-item" autoplay muted loop>
+                    <source src="media/animation/Techo-swing-practice.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                </video>
+                <video class="grid-item" autoplay muted loop>
+                    <source src="media/animation/stopmotion-pool.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                </video>
+                <video class="grid-item" autoplay muted loop>
+                    <source src="media/animation/stopmotion-fish.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                </video>
+                <video class="grid-item" autoplay muted loop>
                     <source src="media/animation/dream-animation.mp4" type="video/mp4">
                      Your browser does not support the video tag.
                 </video>
                 <video class="grid-item" autoplay muted loop>
-                    <source src="media/animation/Techo-swing-practice.mp4" type="video/mp4">
+                    <source src="media/animation/orange.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                </video>
+                <video class="grid-item" autoplay muted loop>
+                    <source src="media/animation/animatie-movil.mp4" type="video/mp4">
                      Your browser does not support the video tag.
                 </video>
           </div>
 
-    </section>
-
-    <div class="container"></div>
-
+        </section>
     
-
-<div id="videosList">           
-    <div class="video">
-        <video class="thevideo" loop preload="none">
-          <source src="media/animation/Teaser_Skateboarding_Lena.mp4" type="video/mp4">
-           Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
+ </div>
     
-  
+     <script>
+    $(window).on('load',function(){
+      $(".loader").fadeOut(1000);
+      $(".content").fadeIn(1000);
+    });
+   </script> 
     
 </body>
 </html>
