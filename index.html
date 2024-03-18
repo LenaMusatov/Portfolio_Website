@@ -9,10 +9,12 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <script src="js/script.js" defer></script>
-    <script src="js/script.js" defer></script>
 
     <!-- <script src="js/p5.js" defer></script> -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <!-- https://cdnjs.com/libraries/jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <link rel="stylesheet" href="mouse.css">
     <script src="js/p5.js" defer></script>
@@ -21,6 +23,7 @@
   <body>
     <!-- ---------------------Mous trail------------------- -->
     <!-- Inspiratie uit: https://codepen.io/zainzafar/pen/oNypoEr -->
+    <div class="mouse">
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
@@ -41,84 +44,100 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
+    </div>
 
 
-  <!-- inspiratie uit tutorial https://youtu.be/0YFrGy_mzjY -->
-    <header id="home">
-      <!-- ---------------------Home------------------- -->
-      <div class="container">
-        <nav>
-          <img src="media/logo-purple.png" alt="logo" class="logo">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#portfolio">My work</a></li>
-            <li><a href="about.html#about">About</a></li>
-            <li><a href="about.html#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-text">
-          <p>Hi, my name is Lèna Musatov</p>
-          <!-- inspiratie uit tutorial https://youtu.be/nxoHR9lltK0 -->
-          <span class="text first-text">I'm</span>
-          <span class="text sec-text">Graphic Designer</span>
-        </div>
+      <!-- ---------------------Loading------------------- -->
+   <div class="loader">
+    <section id="loading">
+      <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
       </div>
-    </header>
+    </section>
+   </div>
 
-    <main>
-
-      <!-- ---------------------Portfolio------------------- -->
-      <div class="grad1" id="portfolio">
+   <div class="content">
+      <!-- inspiratie uit tutorial https://youtu.be/0YFrGy_mzjY -->
+      <header id="home">
+        <!-- ---------------------Home------------------- -->
         <div class="container">
-          <div class="sub-title1">My work</div>
-          <div class="work-list">
-            <div class="hoverZoom" >
-              <a href="illustration.html">
-                <img src="media/square5.jpg">
-                <div class="centered">Illustration</div></a>
-            </div>
-            <div class="hoverZoom" >
-              <a href="character.html">
-                <img src="media/square4.png">
-                <div class="centered">Character art</div>
-              </a>
-            </div>
-            <div class="hoverZoom">
-              <a href="appweb.html">
-                <img src="media/square3.png">
-                <div class="centered">Apps/Websites</div>
-              </a>
-            </div>
-            <div class="hoverZoom">
-              <a href="visual.html">
-                <img src="media/square6.png">
-                <div class="centered">Visual design</div>
-              </a>
-            </div>
-            <div class="hoverZoom">
-              <a href="animation.html">
-                <img src="media/square2.png">
-                <div class="centered">Animation</div>
-              </a>
-            </div>
-            <div class="hoverZoom">
-              <a href="3d.html">
-                <img src="media/square1.png">
-                <div class="centered">3D Design</div>
-              </a>
+          <nav>
+            <a href="index.html">
+              <img src="media/logo-purple.png" alt="logo" class="logo">
+            </a>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#portfolio">My work</a></li>
+              <li><a href="about.html#about">About</a></li>
+              <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-text">
+            <p>Hi, my name is Lèna Musatov</p>
+            <!-- inspiratie uit tutorial https://youtu.be/nxoHR9lltK0 -->
+            <span class="text first-text">I'm</span>
+            <span class="text sec-text">Graphic Designer</span>
+          </div>
+        </div>
+      </header>
+  
+      <main>
+  
+        <!-- ---------------------Portfolio------------------- -->
+        <div class="grad1" id="portfolio">
+          <div class="container">
+            <div class="sub-title1">My work</div>
+            <div class="work-list">
+              <div class="hoverZoom" >
+                <a href="illustration.html">
+                  <img src="media/square5.jpg">
+                  <div class="centered">Illustration</div></a>
+              </div>
+              <div class="hoverZoom" >
+                <a href="character.html">
+                  <img src="media/square4.png">
+                  <div class="centered">Character art</div>
+                </a>
+              </div>
+              <div class="hoverZoom">
+                <a href="appweb.html">
+                  <img src="media/square3.png">
+                  <div class="centered">Apps/Websites</div>
+                </a>
+              </div>
+              <div class="hoverZoom">
+                <a href="visual.html">
+                  <img src="media/square6.png">
+                  <div class="centered">Visual design</div>
+                </a>
+              </div>
+              <div class="hoverZoom">
+                <a href="animation.html">
+                  <img src="media/square2.png">
+                  <div class="centered">Animation</div>
+                </a>
+              </div>
+              <div class="hoverZoom">
+                <a href="3d.html">
+                  <img src="media/square1.png">
+                  <div class="centered">3D Design</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
+   </div>
 
+   <script>
+    $(window).on('load',function(){
+      $(".loader").fadeOut(1000);
+      $(".content").fadeIn(1000);
+    });
+   </script>
 
-
-    </main>
-
-    <footer>
-      <address>
-      </address>
-    </footer>
   </body>
 </html>
                 
