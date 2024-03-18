@@ -28,7 +28,7 @@ textarea {
 
 .form {
   width: 100%;
-  max-width: 820px;
+  max-width: 420px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -43,6 +43,7 @@ textarea {
   position: relative;
 }
 
+/* flecha?  */
 .contact-form:before {
   content: "";
   position: absolute;
@@ -231,10 +232,18 @@ textarea.input {
 }
 
 .social-icons a:hover {
-  transform: scale(1.05);
+  transform: scale(1.20);
 }
 
+/* link mail */
+.link {
+  color: #555;
+  text-decoration: none;
+}
 
+.link:hover {
+  color: #49a4ff;
+}
 
 @media (max-width: 850px) {
   .form {
