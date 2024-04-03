@@ -15,6 +15,62 @@ body{
     /* overflow: hidden; --what is this for?-- */
 }
 
+/* ----------------------Loading-------------------- */
+.content {
+    display: none;
+}
+
+#loading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5f668b;
+}
+
+.loading span {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: dots;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; /* how many times animation plays */
+}
+
+.loading span:nth-child(2){
+    background-color: rgb(255, 255, 255);
+    animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3){
+    background-color: rgb(255, 255, 255);
+    animation-delay: 0.4s;
+}
+
+@keyframes dots{
+    50%{
+        opacity: 0;
+        transform: scale(0.7) translateY(10px);
+    }
+}
+
+/* .loading {
+    animation: hide 1s linear 1s 1 forwards;
+}
+
+@keyframes hide {
+    to {
+        display: none;
+        opacity: 0;
+    }
+} */
+
+
 /* ----------------------Home-------------------- */
 header{
     width: 100%;
@@ -117,7 +173,7 @@ nav ul li a:hover::after{
     }
 }
 
-/* ----------------------Mouse trail-------------------- */
+/* ----------------------Mousetrail-------------------- */
 body {
     box-sizing: border-box;
     padding: 0;
@@ -144,6 +200,13 @@ body {
       height: 26px;
       border-radius: 20px;
       background-color: #fff;
+  }
+
+  @media screen and (max-width: 1200px){
+    .mouse {
+        display: none;
+    }
+
   }
   
 /* ----------------------Portfolio-------------------- */
@@ -211,6 +274,10 @@ body {
     color: white;
 }
 
+#rotate {
+    transform: rotate(-90deg);
+}
+
 .hoverZoom2 {  /* Container around images */
     height: auto; 
     overflow: hidden; 
@@ -261,11 +328,20 @@ body { font-family: sans-serif; }
 }
 
 /* ---- .grid-item ---- */
+@media screen and (max-width: 700px) {
+    .grid-sizer,
+    .grid-item {
+      width: 50%;
+      padding: 1px;
+    }
+}
 
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
-  padding: 3px;
+@media screen and (min-width: 701px) {
+    .grid-sizer,
+    .grid-item {
+      width: 33.333%;
+      padding: 3px;
+    }
 }
 
 .grid-item {
@@ -409,6 +485,7 @@ body { font-family: sans-serif; }
       }
   }
 
+/* --------------------Animation------------------ */
 
 
 /* ----------------------About-------------------- */
@@ -489,8 +566,7 @@ body { font-family: sans-serif; }
     display: block;
 }
 
-/* ----------------------projects-------------------- */
 
-/* ----------------------Animation-------------------- */
+
 
 
