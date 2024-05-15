@@ -7,10 +7,13 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="gallery.js" defer></script>
+    <script src="full-screen.js" defer></script>
   
 
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <!-- for full screen when click on img -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="mouse.css">
     <script src="js/p5.js" defer></script>
@@ -69,178 +72,185 @@
     <div class="grid-item">
       <div class="hoverZoom2">
         <a href="#popup1">
-          <img src="media/dvisual/02_Board Game Mockup.jpg">
+          <article>
+          <img src="media/dvisual/02_Board_Game_Mockup.jpg">
+          </article>
         </a>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
         <a href="#popup1">
+          <article>
           <img src="media/dvisual/1.jpg">
+          </article>
         </a>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
-        <a href="#cont">
+        <label for="modal-1">
           <img src="media/dvisual/book-tedex.jpg">
-        </a>
+        </label>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
         <a href="#popup1">
-          <img src="media/dvisual/illustration planets.jpg">
+          <article>
+            <img src="media/dvisual/illustration-planets.jpg">
+          </article>
         </a>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
-        <a href="#proj1">
+        <label for="modal-3">
           <img src="media/dvisual/poster-denbosch.jpg">
-        </a>
+        </label>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
-        <a href="#popup1">
-          <img src="media/dvisual/Infographic Tomaten.jpg">
-        </a>
-      </div>
-    </div>
-    <div class="grid-item">
-      <div class="hoverZoom2">
-        <a href="#cont">
+        <label for="modal-1">
           <img src="media/dvisual/poster-tedex.jpg">
-        </a>
+        </label>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
-        <a href="#print">
+        <label for="modal-2">
           <img src="media/dvisual/Print-folder.jpg">
+        </label>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="hoverZoom2">
+        <!-- <a href="#print"> -->
+          <article>
+            <img src="media/dvisual/MEDIconcept.png">
+          </article>
         </a>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
         <!-- <a href="#print"> -->
-          <img src="media/dvisual/MEDIconcept.png">
+          <article>
+            <img src="media/dvisual/Illustration-verslaving.png">
+          </article>
         </a>
       </div>
     </div>
     <div class="grid-item">
       <div class="hoverZoom2">
-        <!-- <a href="#print"> -->
-          <img src="media/dvisual/Illustration-verslaving.png">
-        </a>
+          <label for="modal-2">
+            <img src="media/dvisual/L-hout.jpg">
+          </label>
       </div>
     </div>
-    <div class="grid-item">
+    <!-- <div class="grid-item">
       <div class="hoverZoom2">
-        <!-- <a href="#print"> -->
-          <img src="media/dvisual/L-hout.jpg">
-        </a>
-      </div>
-    </div>
-    <div class="grid-item">
-      <div class="hoverZoom2">
-        <!-- <a href="#popup1"> -->
           <img src="media/dvisual/blueprint.jpg">
-        </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
-<!-- ---------------------popups------------------- -->
+<!-- ------------------popups (MODAL)-------------------- -->
+<!-- ------------------------TEST MODAL ---------------------- -->
 
-<!-- ------Design for print (block 1)------- -->
-<div id="print" class="overlay">
-	<div class="popup">
-		<h1>Design for Print</h1>
-    <h2>Blok 1 - CMD</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-      <p>In the first year of CMD (Communication & Multimedia Design), during block 4 in the course "Design for Print", we learned to create images on a flat surface in various techniques using image principles, variation in approach and perception. The goal is to express our own visual perspective with appropriate means. 
-      <br>
-      <p>We got the assignment to create different prototypes for a folder.</p>
-  
-      <img class="img2" src="media/popup/print1.1.png">
-      <img class="img2" src="media/popup/print1.2.png">
-      <img class="img2" src="media/popup/print1.3.png">
-      <img class="img2" src="media/popup/print1.4.png">
-      <img class="img2" src="media/popup/print2.png">
-      <img class="img2" src="media/popup/print3.png">
-      <img class="img2" src="media/popup/print4.png">
-      <img class="img2" src="media/popup/print5.png">
-      <img class="img2" src="media/popup/print6.png">
-      <img class="img2" src="media/popup/print7.png">
-      <br>
-      <p class="date">Sepember - October 2021</p>
-		</div>
-	</div>
+<div class="GModal">
+   <!-- ------CONT- Contextual concepting (block 4) TEDEX------- -->
+   <input class="modal-state" id="modal-1" type="checkbox" />
+   <div class="modal">
+     <label class="modal__bg" for="modal-1"></label>
+     <div class="modal__inner">
+       <label class="modal__close" for="modal-1"></label>
+       <h1>Contextual Concepting</h1>
+       <h2>Year 1 - CMD</h2>
+        <p><img class="GModal" src="media/dvisual/book-tedex.jpg" alt="" />In the first year of CMD (Communication & Multimedia Design), we developed and designed a dynamic visual identity based on a visual concept. The assignement was to creat this for TEDx Delft, with the theme "Let's Make."
+          <br>
+          This dynamic visual identity needed to be captured in a style guide. Additionally, the design needed to be translated into at least three different prototypes: two posters, one landing page of a website, and one or more self-selected media.
+          <br>
+          <br>
+          I decided to go with layers.
+          The different layers of research that stock upon another. Float around each other and combine. This represents the information we know, take for example math, when you know how to do addition and subtraction you can calculate more difficult things, and once you know that, you can calculate even bigger operations.</p>
+
+          <img class="img2" src="media/popup/cont1.1.png">
+          <img class="img2" src="media/popup/cont1.2.png">
+          <img class="img2" src="media/popup/cont1.3.png">
+          <img class="img2" src="media/popup/cont1.4.png">
+          <img class="img2" src="media/popup/cont1.5.png">
+          <img class="img2" src="media/popup/cont1.6.png">
+          <br>
+          <p class="date">June 2022</p>
+     </div>
+   </div>
+
+   <!-- ------PRINT- Design for print (block 1) FOLDER AVANS------- -->
+   <input class="modal-state" id="modal-2" type="checkbox" />
+   <div class="modal">
+     <label class="modal__bg" for="modal-2"></label>
+     <div class="modal__inner">
+       <label class="modal__close" for="modal-2"></label>
+       <div class="GModal">
+       <h1>Design for Print</h1>
+       <h2>Year 1 - CMD</h2>
+       <p><img src="media/dvisual/Print-folder.jpg" alt="" />In the first year of CMD (Communication & Multimedia Design), we learned to create images on a flat surface in various techniques using image principles, variation in approach and perception. The goal is to express our own visual perspective with appropriate means. </p>
+       <br>
+       <p>We got the assignment to create different prototypes for a folder.</p>
+
+       <img class="img2" src="media/popup/print1.1.png">
+       <img class="img2" src="media/popup/print1.2.png">
+       <img class="img2" src="media/popup/print1.3.png">
+       <img class="img2" src="media/popup/print1.4.png">
+       <img class="img2" src="media/popup/print2.png">
+       <img class="img2" src="media/popup/print3.png">
+       <img class="img2" src="media/popup/print4.png">
+       <img class="img2" src="media/popup/print5.png">
+       <img class="img2" src="media/popup/print6.png">
+       <img class="img2" src="media/popup/print7.png">
+       <br>
+       <p class="date">Sepember - October 2021</p>
+
+      </div>
+     </div>
+   </div>
+
+   <!-- ------PROJ- Visual Design (block 1) POSTER DEN BOSCH------- -->
+   <input class="modal-state" id="modal-3" type="checkbox" />
+   <div class="modal">
+     <label class="modal__bg" for="modal-3"></label>
+     <div class="modal__inner">
+       <label class="modal__close" for="modal-3"></label>
+       <h1>Visual Design</h1>
+       <h2>Year 1 - CMD</h2>
+        <p><img class="GModal" src="media/popup/blok1 posters.png" alt="" />In the first year of CMD (Communication & Multimedia Design), during block 4 in the course "Visual design",We had to visualize our vision of the city or village you live in. How do you see and experience your place of residence? What do you find characteristic about your place of residence? Is it a great place or not at all? What do you wish for the future of this city or village?
+          <br>
+          We got the assignment to create a series of two posters where we discover what our vision of our place of residence is.
+          <br>
+          Den Bosch was like a fresh start for me. I've been living in Den Bosch for about two months now. My first impression of the city is that it's beautiful and cozy. The buildings are colorful and the people are very nice.
+          I used to live on the Canary Islands, where I looked at the sea every day. Den Bosch has many rivers and canals, which makes me feel at home.
+         I designed a combination in which the sea meets the rivers and canals of Den Bosch. I am in the rivers of Den Bosch, taking a dive forward into life.
+         </p>
+
+         <img class="img2" src="media/popup/1.0.png">
+         <img class="img2" src="media/popup/blok1 schetsen.png">
+         <img class="img2" src="media/popup/1.1.png">
+         <img class="img2" src="media/popup/1.2.png">
+         <img class="img2" src="media/popup/1.4.png">
+         <br>
+         <p class="date">October 2021</p>
+     </div>
+   </div>
+
+   <!-- ------Interactive design (block 4)------- -->
+   <!-- ------Bussiness (block 5)------- -->
+   <!-- ------Physical interaction (block 5)------- -->
+   <!-- ------Playful interaction (block 7)------- -->
+
 </div>
-
-<!-- ------Visual Design (block 1)------- -->
-<div id="proj1" class="overlay">
-	<div class="popup">
-		<h1>Visual Design</h1>
-    <h2>Blok 1 - CMD</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-      <img class="img" src="media/popup/blok1 posters.png">
-      <br>
-      <p>In the first year of CMD (Communication & Multimedia Design), during block 4 in the course "Visual design",We had to visualize our vision of the city or village you live in. How do you see and experience your place of residence? What do you find characteristic about your place of residence? Is it a great place or not at all? What do you wish for the future of this city or village?
-      We got the assignment to create a series of two posters where we discover what our vision of our place of residence is.</p>
-      <br>
-      <p>Den Bosch was like a fresh start for me. I've been living in Den Bosch for about two months now. My first impression of the city is that it's beautiful and cozy. The buildings are colorful and the people are very nice.
-      I used to live on the Canary Islands, where I looked at the sea every day. Den Bosch has many rivers and canals, which makes me feel at home.
-      I designed a combination in which the sea meets the rivers and canals of Den Bosch. I am in the rivers of Den Bosch, taking a dive forward into life.</p>
-      <br>
-      <img class="img2" src="media/popup/1.0.png">
-      <img class="img2" src="media/popup/blok1 schetsen.png">
-      <img class="img2" src="media/popup/1.1.png">
-      <img class="img2" src="media/popup/1.2.png">
-      <img class="img2" src="media/popup/1.4.png">
-      <br>
-      <p class="date">October 2021</p>
-		</div>
-	</div>
-</div>
-
-<!-- ------Contextual concepting (block 4)------- -->
-<div id="cont" class="overlay">
-	<div class="popup">
-		<h1>Contextual Concepting</h1>
-    <h2>Blok 4 - CMD</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-      <p>In the first year of CMD (Communication & Multimedia Design), during block 4 in the course "Contextual Concepting," we developed and designed a dynamic visual identity based on a visual concept. The assignement was to creat this for TEDx Delft, with the theme "Let's Make."
-      <br>
-      This dynamic visual identity needed to be captured in a style guide. Additionally, the design needed to be translated into at least three different prototypes: two posters, one landing page of a website, and one or more self-selected media.
-      <br>
-      <br>
-      I decided to go with layers.
-      The different layers of research that stock upon another. Float around each other and combine. This represents the information we know, take for example math, when you know how to do addition and subtraction you can calculate more difficult things, and once you know that, you can calculate even bigger operations.</p>
-
-      <img class="img2" src="media/popup/cont1.1.png">
-      <img class="img2" src="media/popup/cont1.2.png">
-      <img class="img2" src="media/popup/cont1.3.png">
-      <img class="img2" src="media/popup/cont1.4.png">
-      <img class="img2" src="media/popup/cont1.5.png">
-      <img class="img2" src="media/popup/cont1.6.png">
-      <br>
-      <p class="date">June 2022</p>
-		</div>
-	</div>
-</div>
-
-<!-- ------Interactive design (block 4)------- -->
-<!-- ------Bussiness (block 5)------- -->
-<!-- ------Physical interaction (block 5)------- -->
-<!-- ------Playful interaction (block 7)------- -->
-
 
 
 </body>
